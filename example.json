@@ -1,0 +1,63 @@
+{
+    "general": {
+        "name": "test",
+        "version": "3.10",
+        "cpp_standard": "20",
+        "cpp_standard_required": true
+    },
+    "deps": {
+        "shared": [
+            {
+                "name": "raygraphic",
+                "git": "https://github.com/P-E-R-R-Y/raygraphic",
+                "tag": "v1.0.0"
+            }
+        ],
+        "static": [
+            {
+                "name": "json",
+                "git": "https://github.com/nlohmann/json",
+                "tag": "v3.11.3",
+                "option": "REQUIRED"
+            },
+            {
+                "name": "finder",
+                "tag": "1.0.0"
+            }
+        ],
+        "subdirectory": [
+        ],
+        "module": [
+        ],
+        "installed": [
+        ]
+    },
+    "project": {
+        "sources": [
+            "main.cpp"
+        ],
+        "type": "executable",
+        "libraries": [
+            "finder",
+            "nlohmann_json::nlohmann_json"
+        ]
+    },
+    "assets": [
+        "image",
+        "font",
+        "audio",
+        "video",
+        "config",
+        "i18n"
+    ],
+    "include": {
+        "type": "public"
+    },
+    "dev": {
+        "cxxflags": [
+            "-Wall",
+            "-Wextra",
+            "-Werror"
+        ]
+    }
+}
